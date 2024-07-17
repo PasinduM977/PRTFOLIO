@@ -1,0 +1,385 @@
+body{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: bisque;
+}
+
+/*Profile grid*/
+
+.profilegrid {
+    background: url(images/profile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows:250px 250px 300px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0.2rem;
+    grid-template-areas:
+        "g1l1 g1r1"
+        "g1l2 g1r1"
+        "g1l3 g1r1"
+        "g1l4 g1r1"
+    ;
+    
+
+}
+
+.intro {
+    grid-area: g1l1;
+  
+    align-self: center;
+    justify-self: center;
+   
+     
+    
+}
+
+
+.cando {
+    grid-area: g1l2;
+    
+    align-self: center;
+    justify-self: center;
+    
+    
+}
+
+.program {
+    grid-area: g1l3;
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0.2rem;
+    grid-template-areas:
+        'sg1l sg1r'
+    ;
+
+}
+
+.ptools {
+   
+    grid-area: sg1l;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.plang {
+    
+    grid-area: sg1r;
+    align-self: center;
+    justify-self: center;
+}
+
+.cv {
+    
+    grid-area: g1l4;
+    align-self: center;
+    justify-self: center;
+}
+
+.imgprof1 {
+    
+    grid-area: g1r1;
+    align-self: center;
+    justify-self: center;
+    
+       
+
+}
+
+
+/*Work experience grid*/
+.wegrid {
+
+background: url(images/work.jpg);
+background-size: cover;
+background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'g2l1 g2r1';
+        grid-gap:0.2rem;
+    
+}
+
+
+
+.we1 {
+
+    grid-area: g2l1;
+    
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+
+
+.we2 {
+
+    grid-area: g2r1;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/*project grid*/
+
+.projgrid {
+
+    background: url(images/proj.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'g3l1 g3r1';
+        grid-gap:0.2rem;
+   
+}
+
+
+.proj1 {
+
+    grid-area: g3l1;
+    
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+
+
+.proj2 {
+
+    grid-area: g3r1;
+    align-self: center;
+    justify-self: center;
+}
+
+/*Education grid*/
+
+
+.edugrid {
+    background: url(images/edu.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'edr1c1 edr1c2 edr1c3 edr1c4 edr1c5 '
+        'edr2c1 edr2c2 edr2c3 edr2c4 edr2c5 '
+    ;
+    
+}
+
+
+
+.edu1 {
+    grid-area: edr1c1;
+    
+    align-self: center;
+    justify-self: center;
+   
+
+}
+
+.edu2 {
+    grid-area: edr1c3;
+    
+    align-self: center;
+    justify-self: center;
+}
+
+.edu3 {
+    grid-area: edr1c5;
+    
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.edu4 {
+    grid-area: edr2c2;
+    
+    align-self: center;
+    justify-self: center;
+}
+
+.edu5 {
+    grid-area: edr2c4;
+    
+    align-self: center;
+    justify-self: center;
+}
+
+/*footer*/
+.footgrid {
+   background-color: black;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'fr1c1 fr1c2 fr1c3'
+        'fr2c1 fr2c2 fr2c3';
+
+    
+}
+
+.add {
+    
+    grid-area: fr1c1;
+    align-self: center;
+    justify-self: center;
+}
+
+.gc {
+    
+    grid-area: fr1c2;
+    align-self: center;
+    justify-self: center;
+}
+
+.social {
+    
+    grid-area: fr1c3;
+    align-self: center;
+    justify-self: center;
+}
+
+.back {
+    
+    grid-area: fr2c2;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+/* Nav bar*/
+
+.navbar{
+   display: grid;
+  align-content: center;
+  justify-content: center;
+  
+   
+}
+
+/*respocive*/
+
+@media(width<720px){
+
+    .profilegrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 250px 250px 250px 550px;
+        grid-template-areas: 
+        "g1l1"
+        "g1l2"
+        "g1l3"
+        "g1l4"
+        "g1r1";
+    }
+}
+
+@media(width<720px){
+
+    .wegrid{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,350px);
+        grid-template-areas: 
+        "g2l1"
+        "g2r1";
+    }
+}
+
+@media(width<720px){
+
+    .projgrid{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,350px);
+        grid-template-areas: 
+        "g3l1"
+        "g3r1";
+    }
+}
+
+@media(width<720px){
+
+    .edugrid{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,300px);
+        grid-template-areas: 
+        "edr1c1"
+        "edr1c3"
+        "edr1c5"
+        "edr2c2"
+        "edr2c4";
+    }
+}
+
+@media(width<720px){
+
+    .footgrid{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,200px) 75px;
+        grid-template-areas: 
+        "fr1c1"
+        "fr1c2"
+        "fr1c3"
+        "fr2c2";
+    }
+}
+
+/*transitions*/
+.card{
+    transition: all 0.5s ease-in-out;
+    transition: 0.5s;
+}
+.card:hover{
+
+   
+    border-radius: 10%;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.btn{
+
+    transition: all 0.5s ease-in-out;  
+}
+.btn:hover{
+
+   
+    border-radius: 10%; 
+}
+
+/*Animations*/
+#WE,#PROJ,#EDU,#CON{
+    animation: text 3s infinite;
+}
+
+@keyframes text{
+    25%{
+color: aqua;
+    }
+    50%{
+color: bisque;
+    }
+    100%{
+color: brown;
+    }
+}
+
